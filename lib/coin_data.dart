@@ -39,4 +39,13 @@ class CoinData {
     }
     return dropDownItems;
   }
+
+  List<DropdownMenuItem<String>> getDropDown() {
+    List<DropdownMenuItem<String>> dropDownItems = [];
+    for (String item in cryptoList) {
+      var newItem = DropdownMenuItem(child: Text(item), value: item);
+      dropDownItems.add(newItem);
+    }
+    return dropDownItems;
+  }
 }
